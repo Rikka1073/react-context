@@ -2,7 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { LavelContext } from "./LavelContext";
 
-const Heading = ({ level, children }) => {
+const Heading = ({ children }) => {
+  const level = useContext(LavelContext);
   switch (level) {
     case 1:
       return <h1>{children}</h1>;

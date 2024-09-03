@@ -1,9 +1,12 @@
 import React from "react";
+import { LavelContext } from "./LavelContext";
 
-const Section = ({ children }) => {
+const Section = ({ level, children }) => {
   return (
     <>
-      <section className="section">{children}</section>
+      <LavelContext.Provider value={level}>
+        <section className="section">{children}</section>
+      </LavelContext.Provider>
     </>
   );
 };
